@@ -1,0 +1,19 @@
+{
+  "name": "boilerplate",
+  "version": "1.0.0",
+  "description": "MEAN Stack Boilerplate",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brandonlafave/boilerplate.git"
+  },
+  "author": "Brandon LaFave",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brandonlafave/boilerplate/issues"
+  },
+  "homepage": "https://github.com/brandonlafave/boilerplate#readme"
+}
