@@ -1,0 +1,22 @@
+{
+  "name": "boilerplate",
+  "description": "MEAN Stack Boilerplate",
+  "main": "app.js",
+  "authors": [
+    "Brandon LaFave"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/brandonlafave/boilerplate",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src/app/assets/vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.8"
+  }
+}
