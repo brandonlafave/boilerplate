@@ -15,5 +15,16 @@
   "bugs": {
     "url": "https://github.com/brandonlafave/boilerplate/issues"
   },
-  "homepage": "https://github.com/brandonlafave/boilerplate#readme"
+  "homepage": "https://github.com/brandonlafave/boilerplate#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-clean-css": "^2.0.13",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^1.9.1",
+    "gulp-uglify": "^2.0.0",
+    "gulp-webserver": "^0.9.1"
+  }
 }

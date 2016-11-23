@@ -1,1 +1,1 @@
-# boilerplate
+# Boilerplate template for Angular applications
