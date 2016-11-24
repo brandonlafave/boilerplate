@@ -7,9 +7,11 @@ webserver = require('gulp-webserver'),
 clean = require('gulp-clean'),
 cleanCSS = require('gulp-clean-css'),
 sourcemaps = require('gulp-sourcemaps'),
-uglify = require('gulp-uglify');
+uglify = require('gulp-uglify'),
+Server = require('karma').Server;
+
  
- /*===== Clean Dist Folder =====*/
+/*===== Clean Dist Folder =====*/
 gulp.task('clean', function () {
     return gulp.src(['dist/*'], {read: false})
         .pipe(clean());
@@ -40,6 +42,14 @@ gulp.task('js', ['clean'], function() {
     	.pipe(rename({ basename: "index", suffix: '.min' }))
     	.pipe(sourcemaps.write('./'))
         .pipe(gulp.dest('dist/js'));
+});
+
+/*===== Run Unit Tests =====*/
+gulp.task('test', function (done) {
+  new Server({
+    configFile: __dirname + '/karma.conf.js',
+    singleRun: true
+  }, done).start();
 });
 
 /*===== Start Web Server =====*/

@@ -1,31 +1,12 @@
-function test () {
-	console.log("This is just a test");
-}
+'use strict';
 
-function test () {
-	console.log("This is just a test");
-}
+angular.module('myApp', [
+])
 
-function test () {
-	console.log("This is just a test");
-}
+.config(function() {
 
-function test () {
-	console.log("This is just a test");
-}
+})
 
-function test () {
-	console.log("This is just a test");
-}
+.run(function() {
 
-function test () {
-	console.log("This is just a test");
-}
-
-function test () {
-	console.log("This is just a test");
-}
-
-function test () {
-	console.log("This is just a test");
-}
+});
