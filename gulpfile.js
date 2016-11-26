@@ -22,24 +22,25 @@ gulp.task('clean', function () {
 /*===== Pipe HTML =====*/
 gulp.task('html', ['clean'], function() {
     return gulp.src('src/index.html')
-        .pipe(gulp.dest('dist'));
+      .pipe(gulp.dest('dist'));
 });
 
 /*===== Pipe SASS to CSS =====*/
 gulp.task('css', ['clean'], function() {
     return gulp.src('src/app/assets/sass/index.scss')
     	.pipe(sourcemaps.init())
-        .pipe(sass())
-        .pipe(cleanCSS())
-        .pipe(rename({ basename: "index", suffix: '.min' }))
-        .pipe(sourcemaps.write('./'))
-        .pipe(gulp.dest('dist/css'));
+      .pipe(sass())
+      .pipe(cleanCSS())
+      .pipe(rename({ basename: "index", suffix: '.min' }))
+      .pipe(sourcemaps.write('./'))
+      .pipe(gulp.dest('dist/css'));
 });
 
 /*===== Pipe JS =====*/
 gulp.task('js', ['clean'], function() {
     var vendorJS = constants.VENDOR_JS_FILES;
     var appJS = constants.APP_JS_FILES;
+
     return gulp.src(vendorJS.concat(appJS))
 	    .pipe(sourcemaps.init())
 	    .pipe(uglify())
