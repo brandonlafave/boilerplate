@@ -8,7 +8,9 @@ clean = require('gulp-clean'),
 cleanCSS = require('gulp-clean-css'),
 sourcemaps = require('gulp-sourcemaps'),
 uglify = require('gulp-uglify'),
-Server = require('karma').Server;
+Server = require('karma').Server,
+constants = require('./config/constants.js'),
+concat = require('gulp-concat');
 
  
 /*===== Clean Dist Folder =====*/
@@ -36,18 +38,20 @@ gulp.task('css', ['clean'], function() {
 
 /*===== Pipe JS =====*/
 gulp.task('js', ['clean'], function() {
-    return gulp.src('src/app/**/**.js')
+    var vendorJS = constants.VENDOR_JS_FILES;
+    var appJS = constants.APP_JS_FILES;
+    return gulp.src(vendorJS.concat(appJS))
 	    .pipe(sourcemaps.init())
 	    .pipe(uglify())
-    	.pipe(rename({ basename: "index", suffix: '.min' }))
+      .pipe(concat('index.min.js'))
     	.pipe(sourcemaps.write('./'))
-        .pipe(gulp.dest('dist/js'));
+      .pipe(gulp.dest('dist/js'));
 });
 
 /*===== Run Unit Tests =====*/
 gulp.task('test', function (done) {
   new Server({
-    configFile: __dirname + '/karma.conf.js',
+    configFile: __dirname + '/config/karma.conf.js',
     singleRun: true
   }, done).start();
 });

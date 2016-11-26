@@ -16,12 +16,16 @@
     "url": "https://github.com/brandonlafave/boilerplate/issues"
   },
   "homepage": "https://github.com/brandonlafave/boilerplate#readme",
-  "dependencies": {},
+  "dependencies": {
+    "angular": "^1.5.8",
+    "bootstrap": "^4.0.0-alpha.5"
+  },
   "devDependencies": {
     "bower": "^1.8.0",
     "gulp": "^3.9.1",
     "gulp-clean": "^0.3.2",
     "gulp-clean-css": "^2.0.13",
+    "gulp-concat": "^2.6.1",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.3.2",
     "gulp-sourcemaps": "^1.9.1",
